@@ -1,0 +1,137 @@
+---
+
+---
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contacto</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <h3>Información de Contacto</h3>
+        <p>📍 Santiago, Chile</p>
+        <p>📧 cecilia.urra@email.com</p>
+        <p>📱 +56 9 XXXX XXXX</p>
+        <div class="schedule">
+          <h4>Horario de Atención</h4>
+          <p>Lunes a Viernes: 9:00 - 18:00</p>
+          <p>Sábado: 10:00 - 14:00</p>
+        </div>
+      </div>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    padding: 5rem 2rem;
+    background-color: white;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 3rem;
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+  }
+
+  .contact-info {
+    padding: 2rem;
+    background-color: #f7fafc;
+    border-radius: 10px;
+  }
+
+  .contact-info h3 {
+    color: #553c9a;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .contact-info p {
+    margin-bottom: 1rem;
+    color: #4a5568;
+  }
+
+  .schedule {
+    margin-top: 2rem;
+  }
+
+  .schedule h4 {
+    color: #553c9a;
+    margin-bottom: 1rem;
+  }
+
+  .contact-form {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  label {
+    color: #4a5568;
+    font-weight: 500;
+  }
+
+  input,
+  textarea {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  textarea {
+    height: 150px;
+    resize: vertical;
+  }
+
+  button {
+    background-color: #553c9a;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #44337a;
+  }
+
+  @media (max-width: 768px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

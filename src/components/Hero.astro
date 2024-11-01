@@ -1,0 +1,94 @@
+---
+import Frases from "./Frases.astro";
+import NavBar from "./NavBar.astro";
+---
+
+<section class="hero">
+  <NavBar class="navbar" />
+  <div class="container">
+    <section class="nombrePortada">
+      <h1>Cecilia</h1>
+      <h1>Urra Elgueta</h1>
+      <h2>ACOMPAÑANTE EMOCIONAL</h2>
+      <Frases />
+      <a href="#contact" class="cta-button">CONTACTO</a>
+    </section>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background-image: url("/images/CeciliaUrra.svg");
+    height: 900px;
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 10%;
+  }
+
+  .nombrePortada {
+    font-family: "Libre Caslon Display";
+  }
+
+  .nombrePortada h1 {
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #4a4a43;
+  }
+
+  .nombrePortada h2 {
+    font-family: "Nunito";
+    font-weight: bold;
+    font-size: 16px;
+    color: #4a4a43;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    letter-spacing: .25rem;
+    margin-top: 50px;
+    background-color: transparent;
+    border: 1px solid #4a4a43;
+    color: #4a4a43;
+    padding: 1rem 3rem;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: #31312a;
+    color: #fff;
+    border: 2px solid #176be0;
+    
+  }
+
+  .navbar {
+    position: fixed;
+  }
+</style>

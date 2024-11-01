@@ -1,0 +1,29 @@
+---
+const quotes = [
+  "Te acompaño en el infinito camino del autoconocimiento, hacia la tranaformación y realización personal",
+];
+let currentQuoteIndex = 0;
+---
+
+<p id="quote">{quotes[0]}</p>
+
+<script>
+  const quotes = JSON.parse(
+    '["Te acompaño en el infinito camino del autoconocimiento, hacia la tranaformación y realización personal", "Encontrar la llave maestra de la autoconciencia, cuestionarte y observarte, serán las herramientas para el poder de elegir y diseñar tu vida", "Encontraremos nuevas formas de vivir tu vida y transitar el camino que te conduce a encontrar una mejor versión de ti"]'
+  );
+  let currentQuoteIndex = 0;
+
+  setInterval(() => {
+    currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+    document.getElementById("quote").textContent = quotes[currentQuoteIndex];
+  }, 5000);
+</script>
+
+<style>
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 700px;
+    padding-left: 100px;
+  }
+</style>
