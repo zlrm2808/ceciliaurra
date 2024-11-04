@@ -1,13 +1,80 @@
-<nav>
+<nav class="navbar">
   <div class="nav-container">
     <a href="/" class="logo">
       <span>C</span>ECILIA <span>U</span>RRA
     </a>
     <div class="nav-links">
+      <a href="#">Inicio</a>
       <a href="#about">Sobre Mí</a>
       <a href="#services">Servicios</a>
       <a href="#testimonials">Testimonios</a>
       <a href="#contact">Contacto</a>
     </div>
   </div>
-</nav>;
+</nav>
+
+<style>
+  nav {
+    position: fixed;
+    width: 100%;
+    background-color: transparent; /* Fondo transparente inicialmente */
+    transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
+    z-index: 100;
+  }
+
+  nav.scrolled {
+    background-color: white; /* Fondo blanco cuando se hace scroll */
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-family: "Raleway" !important;
+    letter-spacing: 0.25cap;
+    font-weight: 100;
+    color: #2d3748;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .logo span {
+    font-size: 2.5rem;
+    font-weight: 350;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding-right: 20%;
+  }
+
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #44337a;
+    text-decoration: underline 2px solid;
+    font-weight: 900;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  }
+</style>

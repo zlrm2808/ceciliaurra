@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -20,18 +22,29 @@ const { title } = Astro.props;
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
-		<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header></header>
     <slot />
     
     <a
-      href="https://wa.me/584129732930"
+      href="https://wa.me/584243749189"
       class="whatsapp-button"
       target="_blank"
       rel="noopener noreferrer"
@@ -48,17 +61,6 @@ const { title } = Astro.props;
         ></path>
       </svg>
     </a>
-    <script>
-      const nav = document.querySelector("nav");
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 0) {
-          nav.classList.add("scrolled");
-        } else {
-          nav.classList.remove("scrolled");
-        }
-      });
-    </script>
   </body>
 </html>
 
@@ -95,61 +97,6 @@ const { title } = Astro.props;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  nav {
-    position: fixed;
-    width: 100%;
-    background-color: transparent; /* Fondo transparente inicialmente */
-    transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
-  }
-
-  nav.scrolled {
-    background-color: white; /* Fondo blanco cuando se hace scroll */
-  }
-
-  .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .logo {
-		margin-left: -10%;
-    font-family: "Raleway" !important;
-    letter-spacing: 0.25cap;
-    font-weight: 100;
-    color: #2d3748;
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-decoration: none;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  }
-
-  .logo span {
-    font-size: 2.5rem;
-    font-weight: 350;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-    justify-content: center;
-		width: 80%;
-		padding-right: 20%;;
-  }
-
-  .nav-links a {
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-
-  .nav-links a:hover {
-    text-decoration: underline 2px solid;
-  }
-
   footer {
     background-color: var(--text);
     color: white;
@@ -181,11 +128,5 @@ const { title } = Astro.props;
 
   .whatsapp-button:hover {
     transform: scale(1.1);
-  }
-
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
   }
 </style>

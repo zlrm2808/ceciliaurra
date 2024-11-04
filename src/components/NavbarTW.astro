@@ -1,0 +1,143 @@
+<div
+  id="navbar"
+  class="fixed top-0 left-0 w-full nbcontainer bg-transparent flex box-border [color:_#4a4a43] items-end z-50 [font-family:_Nunito] text-base font-normal"
+>
+  <div class="w-1/6 min-w-max">
+    <a href="/">
+      <img id="logo" class="h-6 pl-5 mb-3" src="/images/logo-CU.png" alt="" />
+    </a>
+  </div>
+  <div class="w-4/6 justify-items-center">
+    <nav>
+      <ul
+        id="menuItems"
+        class="flex flex-row gap-12 place-content-end h-12 pt-3"
+      >
+        <li class="nav-item hover:text-black"><a href="#">Inicio</a></li>
+        <li class="nav-item hover:text-black"><a href="#about">Sobre mí</a></li>
+        <li class="nav-item hover:text-black">
+          <a href="#services">Servicios</a>
+        </li>
+        <li class="nav-item hover:text-black">
+          <a href="#testimonials">Testimonios</a>
+        </li>
+        <li class="nav-item hover:text-black">
+          <a href="#contact">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div id="menuMobile" class="w-1/6 flex justify-end items-center pr-5">
+    <div id="hamburger" class="text-3xl menu-icon hidden">&#9776;</div>
+  </div>
+</div>
+
+<script is:inline>
+  const nav = document.querySelector("#navbar");
+  const menuIcon = document.querySelector("#hamburger");
+  const menuItems = document.querySelector("#menuItems");
+
+  if (nav != null) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    });
+  }
+
+  menuIcon.addEventListener("click", () => {
+    menuItems.classList.toggle("hidden");
+    menuIcon.classList.toggle("open");
+
+    if (menuIcon.classList.contains("open")) {
+      menuIcon.innerHTML = "&#9932";
+    } else {
+      menuIcon.innerHTML = "&#9776";
+    }
+  });
+
+  document.querySelectorAll(".nav-item").forEach((item) => {
+    item.addEventListener("click", () => {
+      menuIcon.click();
+    });
+  });
+</script>
+
+<style>
+  .scrolled {
+    background-color: white;
+  }
+
+  .nav-item {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .nav-item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 8px;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .nav-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  /* Estilos para el ícono del menú hamburguesa */
+
+  /* Mostrar el ícono del menú hamburguesa solo en pantallas pequeñas */
+  @media (max-width: 900px) {
+    #navbar {
+      background: white;
+    }
+
+    .menu-icon {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .menu-icon.open {
+      transform: rotate(90deg);
+    }
+
+    #menuItems {
+      border: 2px solid #4a4a43;
+      box-shadow: 0.3cm 0.3cm 0.5cm 0;
+      margin-left: 2%;
+      border-radius: 10px;
+      display: none;
+      flex-direction: column;
+      height: fit-content;
+      position: absolute;
+      left: 0;
+      padding: 10px;
+      gap: 10px;
+      background-color: lightgray;
+    }
+
+    #menuItems li {
+      padding-bottom: 10px;
+    }
+
+    .hidden {
+      display: flex !important;
+    }
+
+    #logo {
+      margin-bottom: 0;
+      margin-top: 8%;
+    }
+  }
+</style>

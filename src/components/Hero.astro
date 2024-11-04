@@ -1,17 +1,22 @@
 ---
 import Frases from "./Frases.astro";
 import NavBar from "./NavBar.astro";
+import Button from "./Button.astro";
+import NavBar2 from "./NavBar2.astro";
+import NavbarTW from "./NavbarTW.astro";
 ---
 
 <section class="hero">
-  <NavBar class="navbar" />
+  <NavbarTW />
   <div class="container">
     <section class="nombrePortada">
       <h1>Cecilia</h1>
       <h1>Urra Elgueta</h1>
       <h2>ACOMPAÑANTE EMOCIONAL</h2>
-      <Frases />
-      <a href="#contact" class="cta-button">CONTACTO</a>
+      <section id="container-bottom">
+        <Frases />
+      </section>
+      <Button href="#contact" caption="CONTACTO" />
     </section>
   </div>
 </section>
@@ -19,7 +24,7 @@ import NavBar from "./NavBar.astro";
 <style>
   .hero {
     background-image: url("/images/CeciliaUrra.svg");
-    height: 900px;
+    height: 100vh;
     width: 100%;
     background-size: cover;
     text-align: center;
@@ -68,27 +73,126 @@ import NavBar from "./NavBar.astro";
     margin-bottom: 2rem;
   }
 
-  .cta-button {
-    display: inline-block;
-    letter-spacing: .25rem;
-    margin-top: 50px;
-    background-color: transparent;
-    border: 1px solid #4a4a43;
-    color: #4a4a43;
-    padding: 1rem 3rem;
-    font-size: 14px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+  @media (max-width: 1200px) {
+    .hero {
+      background-image: url("/images/CeciliaUrra.svg");
+      height: 100vh;
+      width: 100%;
+      background-size: auto;
+      text-align: center;
+    }
   }
 
-  .cta-button:hover {
-    background-color: #31312a;
-    color: #fff;
-    border: 2px solid #176be0;
-    
-  }
+  @media (max-width: 1150px) {
+    .hero {
+      background: #c2c9cf;
+      height: 100vh;
+      width: 100%;
+      background-size: auto;
+      text-align: center;
+    }
 
-  .navbar {
-    position: fixed;
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding-top: 10%;
+    }
+
+    .nombrePortada {
+      font-family: "Libre Caslon Display";
+    }
+
+    .nombrePortada h1 {
+      font-size: 120px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: #4a4a43;
+    }
+
+    .nombrePortada h2 {
+      font-family: "Nunito";
+      font-weight: bold;
+      font-size: 16px;
+      color: #4a4a43;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      color: #2d3748;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #4a5568;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: #4a5568;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        height: 100vh;
+        width: 100%;
+        background-size: auto;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 100vw;
+      }
+
+      #container-bottom {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .hero {
+        height: 100vh;
+        width: 100%;
+        background-size: auto;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 100vw;
+      }
+
+      #container-bottom {
+        width: 85%;
+      }
+    }
+
+    @media (max-width: 571px) {
+      .hero {
+        height: 100vh;
+        width: 100%;
+        background-size: auto;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 100vw;
+      }
+
+      #container-bottom {
+        width: 100%;
+        margin-left: -40px;
+      }
+
+      .nombrePortada h1 {
+        margin-top: 5%;
+        font-size: 70px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #4a4a43;
+      }
+    }
   }
 </style>
