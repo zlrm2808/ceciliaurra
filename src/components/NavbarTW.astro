@@ -58,11 +58,29 @@
     }
   });
 
-  document.querySelectorAll(".nav-item").forEach((item) => {
-    item.addEventListener("click", () => {
-      menuIcon.click();
-    });
-  });
+  const navItems = document.querySelectorAll(".nav-item");
+
+  const handleNavItemClick = () => {
+    menuIcon.click();
+  };
+
+  const checkMobileMode = () => {
+    if (window.innerWidth <= 900) {
+      navItems.forEach((item) => {
+        item.addEventListener("click", handleNavItemClick);
+      });
+    } else {
+      navItems.forEach((item) => {
+        item.removeEventListener("click", handleNavItemClick);
+      });
+    }
+  };
+
+  // Check on initial load
+  checkMobileMode();
+
+  // Check on window resize
+  window.addEventListener("resize", checkMobileMode);
 </script>
 
 <style>
