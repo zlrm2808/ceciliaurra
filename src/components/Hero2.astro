@@ -1,0 +1,86 @@
+---
+import Frases from "./Frases.astro";
+import NavBar from "./NavBar.astro";
+import Button from "./Button.astro";
+import NavBar2 from "./NavBar2.astro";
+import NavbarTW from "./NavbarTW.astro";
+---
+
+<div id="hero">
+  <div class="flex h-screen w-full bg-cover" id="fondo">
+    <div
+      id="rrss"
+      class="w-1/12 items-end flex flex-col justify-evenly -space-y-40 max-sm:hidden"
+    >
+      <a href="https://www.instagram.com/cecilia.urra.395/" target="_blank"
+        ><img
+          class="h-12 w-12"
+          src="/images/instagram.svg"
+          alt="Instagram"
+        /></a
+      >
+      <a href="https://www.facebook.com/cecilia.urra.395" target="_blank"
+        ><img class="h-12 w-12" src="/images/facebook.svg" alt="Facebook" /></a
+      >
+      <a
+        href="https://www.linkedin.com/in/cecilia-urra-30a1422b/"
+        target="_blank"
+        ><img class="h-12 w-12" src="/images/linkedin.svg" alt="LinkedIn" /></a
+      >
+    </div>
+    <div id="info" class="flex flex-col justify-center items-center w-10/12 max-sm:w-full">
+      <h1
+        class="max-sm:text-6xl [font-family:_Libre_Caslon_Display;] text-8xl mb-8 [color:#4a4a43]"
+      >
+        Cecilia
+      </h1>
+      <h1
+        class="max-sm:text-6xl [font-family:_Libre_Caslon_Display;] text-8xl mb-8 [color:#4a4a43]"
+      >
+        Urra Elgueta
+      </h1>
+      <h2
+        class="[font-family:_Nunito] [color:_#4a4a43] text-base font-bold mb-10"
+      >
+        ACOMPAÑANTE EMOCIONAL
+      </h2>
+      <Frases />
+      <Button href="#contact" caption="CONTACTO" />
+    </div>
+    <div class="w-1/12 max-sm:hidden"></div>
+  </div>
+</div>
+
+<style>
+  #fondo {
+    background-image: url("/images/CeciliaUrra.svg");
+  }
+
+  #rrss a img {
+    border-radius: 999px;
+    box-shadow: 0.2cm 0.2cm 0.2cm 0;
+  }
+
+  #rrss a img:hover {
+    box-shadow: 0 0 0.3cm 0.1cm rgba(51, 50, 50, 1);
+    filter: brightness(1.5);
+  }
+
+  @media (max-width: 1130px) {
+    #fondo {
+      background: #c2c9cf;
+    }
+  }
+
+  @media (max-width: 768px) and (max-height: 1024px) {
+    #fondo {
+      height: 1024px;
+    }
+  }
+
+  @media (max-width: 750px) {
+    #fondo {
+      height: 100vh;
+    }
+  }
+</style>
