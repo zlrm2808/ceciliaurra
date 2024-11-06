@@ -2,6 +2,7 @@
 import Frases from "./Frases.astro";
 import NavBar from "./NavBar.astro";
 import Button from "./Button.astro";
+import ButtonSlice from "./ButtonSlice.astro";
 import NavBar2 from "./NavBar2.astro";
 import NavbarTW from "./NavbarTW.astro";
 ---
@@ -28,19 +29,22 @@ import NavbarTW from "./NavbarTW.astro";
         ><img class="h-12 w-12" src="/images/linkedin.svg" alt="LinkedIn" /></a
       >
     </div>
-    <div id="info" class="flex flex-col justify-center items-center w-10/12 max-sm:w-full">
+    <div
+      id="info"
+      class="flex flex-col justify-center items-center w-10/12 max-sm:w-full"
+    >
       <h1
-        class="max-sm:text-6xl [font-family:_Libre_Caslon_Display;] text-8xl mb-8 [color:#4a4a43]"
+        class="max-sm:text-7xl [font-family:_Libre_Caslon_Display;] text-8xl mb-8 [color:#4a4a43]"
       >
         Cecilia
       </h1>
       <h1
-        class="max-sm:text-6xl [font-family:_Libre_Caslon_Display;] text-8xl mb-8 [color:#4a4a43]"
+        class="max-sm:text-7xl [font-family:_Libre_Caslon_Display;] text-8xl mb-8 [color:#4a4a43]"
       >
         Urra Elgueta
       </h1>
       <h2
-        class="[font-family:_Nunito] [color:_#4a4a43] text-base font-bold mb-10"
+        class="[font-family:_Nunito] [color:_#4a4a43] text-base font-bold mb-10 max-sm:text-sm"
       >
         ACOMPAÑANTE EMOCIONAL
       </h2>
@@ -72,15 +76,19 @@ import NavbarTW from "./NavbarTW.astro";
     }
   }
 
-  @media (max-width: 768px) and (max-height: 1024px) {
+  @media (max-width: 768px) {
     #fondo {
-      height: 1024px;
+      height: 100vh;
     }
   }
 
-  @media (max-width: 750px) {
+  @media (max-width: 360px) {
     #fondo {
       height: 100vh;
+    }
+
+    h1 {
+      font-size: 50px;
     }
   }
 </style>
