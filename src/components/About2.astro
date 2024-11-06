@@ -1,6 +1,7 @@
 ---
 import Button from "./Button.astro";
 ---
+
 <section id="sbsr-1363">
   <div class="cs-container">
     <div class="cs-image-group">
@@ -133,14 +134,13 @@ import Button from "./Button.astro";
             width="24"
             height="24"
           />
-          <Button caption="Saber mas" href="#"/>
+          <Button caption="Saber mas" href="#" />
           Digital Clean Checklist Prepared New Year
         </li>
       </ul>
-      
     </div>
-    <div class="cs-bubbles" aria-hidden="true"></div>
   </div>
+  <div class="cs-bubbles" aria-hidden="true"></div>
 </section>
 
 <style>
@@ -443,11 +443,11 @@ import Button from "./Button.astro";
     }
     #sbsr-1363 .cs-bubbles {
       font-size: min(2.5vw, 0.7em);
-      width: 26.1875em;
-      height: 26.6875em;
+      width: 26em;
+      height: 26em;
       position: absolute;
       /* reset at larger desktop */
-      right: -16.25em;
+      right: 16.25em;
       /* changes to 30px at desktop */
       bottom: -3.125em;
       z-index: -1;
@@ -505,16 +505,16 @@ import Button from "./Button.astro";
       order: 0;
     }
     #sbsr-1363 .cs-bubbles {
-      font-size: min(2.5vw, 1em);
-      right: -6.25rem;
-      bottom: 0rem;
+      margin-right: 46.875rem;
+      left: 70%;
+      right: 50%;
     }
   }
   /* Large Desktop 1600px */
   @media only screen and (min-width: 100rem) {
     #sbsr-1363 .cs-bubbles {
       margin-right: 46.875rem;
-      left: auto;
+      left: 70%;
       right: 50%;
     }
   }
