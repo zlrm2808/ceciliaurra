@@ -1,147 +1,124 @@
 ---
 import Button from "./Button.astro";
+import Frases2 from "./Frases2.astro";
 ---
 
-<section id="sbsr-1363">
-  <div class="cs-container">
-    <div class="cs-image-group">
-      <picture class="cs-background h-1">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="/images/SFCU-52.jpg" />
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="/images/SFCU-52.jpg" />
-        <img
-          loading="lazy"
-          decoding="async"
-          src="/images/SFCU-52.jpg"
-          alt="people"
-        />
-      </picture>
-      <div class="cs-box">
-        <img
-          class="cs-box-icon"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/gear-white.svg"
-          alt="people"
-          width="60"
-          height="60"
-        />
-        <span class="cs-desc"> We’ve Over 26 Years of Experience </span>
+<div id="about" class="h-screen">
+  <section id="sbsr-1363" class="h-screen">
+    <div class="cs-container">
+      <div class="cs-image-group">
+        <picture class="cs-background">
+          <!--Mobile Image-->
+          <source media="(max-width: 600px)" srcset="/images/SFCU-52.jpg" />
+          <!--Tablet and above Image-->
+          <source media="(min-width: 601px)" srcset="/images/SFCU-52.jpg" />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/images/SFCU-52.jpg"
+            alt="people"
+          />
+        </picture>
+        <div class="cs-box">
+          <img
+            class="cs-box-icon"
+            loading="lazy"
+            decoding="async"
+            src="/images/icons/gear-white.svg"
+            alt="people"
+            width="60"
+            height="60"
+          />
+          <span class="cs-desc"> Más de 10 Años de Experiencia </span>
+        </div>
+      </div>
+      <div class="cs-content">
+        <span class="cs-topper [font-family:_Nunito]"
+          >¿POR QUÉ CONFIAR EN MÍ?</span
+        >
+        <h2
+          class="[font-family:_Libre_Caslon_Display;] text-6xl mb-8 [color:#4a4a43]"
+        >
+          Profesional con amplia experiencia
+        </h2>
+        <p class="cs-text [font-family:_Nunito]">
+          Soy Cecilia Urra Elgueta, y creo firmemente en el poder del
+          autoconocimiento y la acción para alcanzar el bienestar. Desde joven,
+          he sentido una profunda curiosidad por el ser humano y su capacidad
+          para transformar su vida. Mi historia personal y experiencias me han
+          llevado a un camino de autoconocimiento, el cual comparto actualmente
+          con quienes acompaño en su viaje emocional. Mi curiosidad innata me ha
+          llevado a explorar diversas áreas como la fotografía, la pedagogía y
+          la gastronomía, enriqueciendo así mi perspectiva y crecimiento
+          personal.
+        </p>
+        <ul class="cs-card-group h-40">
+          <li class="cs-item">
+            <h3 class="cs-h3">
+              <img
+                class="cs-h3-icon"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/circle-check.svg"
+                alt="icon"
+                width="32"
+                height="32"
+              />
+              Estás en el sitio indicado si...
+            </h3>
+            <Frases2 />
+            <p class="cs-item-text"></p>
+          </li>
+        </ul>
+
+        <ul class="cs-ul [font-family:_Nunito]">
+          <li class="cs-li">
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="/images/icons/black-check.svg"
+              alt="checkmark"
+              width="24"
+              height="24"
+            />
+            Atención personalizada
+          </li>
+          <li class="cs-li">
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="/images/icons/black-check.svg"
+              alt="checkmark"
+              width="24"
+              height="24"
+            />
+            Contacto telefónico
+          </li>
+          <li class="cs-li">
+            <img
+              class="cs-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="/images/icons/black-check.svg"
+              alt="checkmark"
+              width="24"
+              height="24"
+            />
+            Preparación contínua
+          </li>
+        </ul>
+        <Button caption="SABER MAS" href="#" />
       </div>
     </div>
-    <div class="cs-content">
-      <span class="cs-topper">¿POR QUÉ CONFIAR EN MÍ?</span>
-      <h2 class="cs-title">Profesional con amplia experiencia</h2>
-      <p class="cs-text">
-        Soy Cecilia Urra Elgueta, y creo firmemente en el poder del
-        autoconocimiento y la acción para alcanzar el bienestar. Desde joven, he
-        sentido una profunda curiosidad por el ser humano y su capacidad para
-        transformar su vida. Mi historia personal y experiencias me han llevado
-        a un camino de autoconocimiento, el cual comparto actualmente con
-        quienes acompaño en su viaje emocional. Mi curiosidad innata me ha
-        llevado a explorar diversas áreas como la fotografía, la pedagogía y la
-        gastronomía, enriqueciendo así mi perspectiva y crecimiento personal.
-      </p>
-      <ul class="cs-card-group">
-        <li class="cs-item">
-          <h3 class="cs-h3">
-            <img
-              class="cs-h3-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trophy.svg"
-              alt="icon"
-              width="32"
-              height="32"
-            />
-            Quality Services
-          </h3>
-          <p class="cs-item-text">
-            There are many variations of but the majority is simply free
-            suffered.
-          </p>
-        </li>
-        <li class="cs-item">
-          <h3 class="cs-h3">
-            <img
-              class="cs-h3-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/circle-check.svg"
-              alt="icon"
-              width="32"
-              height="32"
-            />
-            Quality Services
-          </h3>
-          <p class="cs-item-text">
-            There are many variations of but the majority is simply free
-            suffered.
-          </p>
-        </li>
-      </ul>
-      <ul class="cs-ul">
-        <li class="cs-li">
-          <img
-            class="cs-icon"
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg"
-            alt="checkmark"
-            width="24"
-            height="24"
-          />
-          Digital Solutions Provider Agency
-        </li>
-        <li class="cs-li">
-          <img
-            class="cs-icon"
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg"
-            alt="checkmark"
-            width="24"
-            height="24"
-          />
-          Unicode, UTF8 & Character Sets The Ultimate Guide
-        </li>
-        <li class="cs-li">
-          <img
-            class="cs-icon"
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg"
-            alt="checkmark"
-            width="24"
-            height="24"
-          />
-          WordPress Guides For The Advanced Beginner
-        </li>
-        <li class="cs-li">
-          <img
-            class="cs-icon"
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg"
-            alt="checkmark"
-            width="24"
-            height="24"
-          />
-          <Button caption="Saber mas" href="#" />
-          Digital Clean Checklist Prepared New Year
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="cs-bubbles" aria-hidden="true"></div>
-</section>
+    <div class="cs-bubbles" aria-hidden="true"></div>
+  </section>
+</div>
 
 <style>
   :root {
@@ -196,17 +173,15 @@ import Button from "./Button.astro";
   }
 
   .cs-text {
-    font-size: var(--bodyFontSize);
     line-height: 1.5em;
     text-align: inherit;
+    font-size: 15px;
     width: 100%;
     max-width: 40.625rem;
     margin: 0;
+    margin-top: -10px;
     color: var(--bodyTextColor);
   }
-  /*-- -------------------------- -->
-<---   Side By Side Reverse     -->
-<--- -------------------------- -*/
 
   /* Mobile - 360px */
   @media only screen and (min-width: 0rem) {
@@ -246,6 +221,7 @@ import Button from "./Button.astro";
       display: flex;
       flex-direction: column;
       align-items: center;
+      height: 100%;
       /* 48px - 64px */
       gap: clamp(3rem, 6vw, 4rem);
     }
@@ -253,7 +229,7 @@ import Button from "./Button.astro";
       /* set text align to left if content needs to be left aligned */
       text-align: left;
       width: 100%;
-      max-width: 39.375rem;
+      max-width: 47rem;
       display: flex;
       flex-direction: column;
       /* centers content horizontally, set to flex-start to left align */
@@ -276,7 +252,7 @@ import Button from "./Button.astro";
     #sbsr-1363 .cs-card-group {
       width: 100%;
       max-width: 39.375rem;
-      margin: 0 0 1.5rem 0;
+      margin: -1rem 0 0.5rem 0;
       padding: 0;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
@@ -294,15 +270,16 @@ import Button from "./Button.astro";
       border: 1px solid #e8e8e8;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       gap: 0.75rem;
     }
     #sbsr-1363 .cs-h3 {
-      font-size: 1.25rem;
+      font-size: 1.75rem;
       line-height: 1.2em;
-      font-weight: 700;
+      font-weight: 200;
       margin: 0;
-      color: var(--headerColor);
+      margin-top: -10px;
+      color: #4a4a43;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -321,7 +298,7 @@ import Button from "./Button.astro";
     }
     #sbsr-1363 .cs-ul {
       width: 100%;
-      margin: 0 0 1.5rem 0;
+      margin: 0 0 -1.5rem 0;
       padding: 0;
       display: flex;
       flex-direction: column;
@@ -386,7 +363,7 @@ import Button from "./Button.astro";
       width: 100%;
       max-width: 36.625rem;
       /* Changes to auto at desktop */
-      height: 32.5rem;
+      height: auto;
       /* 32px - 48px */
       border-radius: clamp(2rem, 4vw, 3rem);
       /* clips the corners of the children around the border radius */
@@ -401,11 +378,12 @@ import Button from "./Button.astro";
       display: block;
     }
     #sbsr-1363 .cs-background img {
-      width: 100%;
+      width: 70%;
       height: 100%;
       /* makes it cover the parent like a backgorund image */
       object-fit: cover;
       display: block;
+      border-radius: 60px;
     }
     #sbsr-1363 .cs-box {
       text-align: left;
@@ -423,7 +401,7 @@ import Button from "./Button.astro";
       gap: 1.5rem;
       position: absolute;
       /* 12px - 20px */
-      right: clamp(0.75rem, 1.9vw, 1.5rem);
+      right: clamp(5.75rem, 1.9vw, 1.5rem);
       /* 12px - 20px */
       bottom: clamp(0.75rem, 1.9vw, 1.5rem);
     }
@@ -491,26 +469,41 @@ import Button from "./Button.astro";
       animation-iteration-count: infinite;
     }
   }
-  /* Small Desktop - 1024px */
+
   @media only screen and (min-width: 64rem) {
     #sbsr-1363 .cs-container {
-      max-width: 80rem;
+      min-width: 85rem;
       flex-direction: row;
       justify-content: space-between;
-      align-items: stretch;
+      align-items: flex-start;
+      margin-top: -30px;
     }
+
+    #sbsr-1363 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      margin-left: -180px;
+      text-align: left;
+      width: 100%;
+      max-width: 47rem;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: flex-start;
+    }
+
     #sbsr-1363 .cs-image-group {
       height: auto;
       /* sends it to the right in the 2nd position */
       order: 0;
     }
     #sbsr-1363 .cs-bubbles {
-      margin-right: 46.875rem;
+      margin-right: 0;
+      top: 60%;
       left: 70%;
       right: 50%;
     }
   }
-  /* Large Desktop 1600px */
+
   @media only screen and (min-width: 100rem) {
     #sbsr-1363 .cs-bubbles {
       margin-right: 46.875rem;

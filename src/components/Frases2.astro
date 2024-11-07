@@ -1,0 +1,23 @@
+---
+const quotes = ["Deseas descubrir quien eres realmente"];
+let currentQuoteIndex = 0;
+---
+
+<div
+  class="flex flex-wrap [font-family:_Nunito] text-base text-center max-md:text-sm max-md:px-9"
+>
+  <p id="quote2">{quotes[0]}</p>
+</div>
+
+<script>
+  const quotes = JSON.parse('["Deseas descubrir quien eres realmente", "Deseas saber que es lo que te apasiona", "Quieres entender cuales son esas creencias y patrones emocionales que te siguen comandando", "Quieres mejorar tu salud física y mental"]');
+  let currentQuoteIndex = 0;
+
+  setInterval(() => {
+    currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+    let elem = document.getElementById("quote2");
+    if (elem) {
+      elem.textContent = quotes[currentQuoteIndex];
+    }
+  }, 5000);
+</script>
