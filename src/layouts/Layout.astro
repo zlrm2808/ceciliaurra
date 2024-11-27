@@ -42,7 +42,7 @@ import "../styles/global.css";
   <body>
     <header></header>
     <slot />
-    
+
     <a
       href="https://wa.me/584243749189"
       class="whatsapp-button"
@@ -66,11 +66,17 @@ import "../styles/global.css";
 
 <style is:global>
   :root {
-    --primary: #553c9a;
+    --primary: #4a4a43;
+    --primary-TextColor: #767676;
+    --primaryLight: #fc653c;
     --primary-dark: #44337a;
     --text: #2d3748;
     --text-light: #4a5568;
     --background: #f7fafc;
+    --primary-ff: "Libre Caslon Display";
+    --second--ff: "Nunito";
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    --bodyTextColorWhite: #fff;
   }
 
   * {
@@ -129,4 +135,145 @@ import "../styles/global.css";
   .whatsapp-button:hover {
     transform: scale(1.1);
   }
+
+  .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--primary-TextColor);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+
+  .cs-image-box {
+    position: relative;
+    width: 100%;
+    margin: -10.5rem 0 clamp(2rem, 5vw, 3rem) 0;
+  }
+  .cs-image-box img {
+    border-radius: 1.5rem;
+    object-fit: cover;
+    width: 100%; /* Asegúrate de que la imagen cubra todo el contenedor */
+  }
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.5rem; /* Ajusta el tamaño de fuente según sea necesario */
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: 80%; /* Asegúrate de que el texto no se desborde */
+  }
+  /* Add this as it's own dark.css file and linked on all pages */
+/*-- -------------------------- -->
+<---      Core Dark Styles      -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  :root {
+    --dark: #082032;
+    --medium: #2c394b;
+    --accent: #334756;
+    --bodyTextColorWhite: #fafbfc;
+  }
+  body.dark-mode {
+    background-color: var(--dark);
+  }
+  body.dark-mode p,
+  body.dark-mode li,
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode h4,
+  body.dark-mode h5,
+  body.dark-mode h6,
+  body.dark-mode .cs-title,
+  body.dark-mode .cs-text,
+  body.dark-mode .cs-li {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode .light {
+    display: none;
+  }
+  body.dark-mode .dark {
+    display: block !important;
+  }
+  .dark {
+    /* class used to hide elements that only need to be seen when dark mode is enabled */
+    display: none;
+  }
+}
+/*-- -------------------------- -->
+<---      Dark Mode Toggle      -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #dark-mode-toggle .cs-sun {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  body.dark-mode #dark-mode-toggle .cs-moon {
+    transform: translate(-50%, -150%);
+    opacity: 0;
+  }
+  #dark-mode-toggle {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3.75rem;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: none;
+    overflow: hidden;
+    padding: 0;
+  }
+  #dark-mode-toggle img,
+  #dark-mode-toggle svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.5625rem;
+    height: 1.5625rem;
+    pointer-events: none;
+  }
+  #dark-mode-toggle .cs-moon {
+    z-index: 2;
+    transition: transform 0.3s,
+                opacity 0.3s,
+                fill 0.3s;
+    fill: #000;
+  }
+  #dark-mode-toggle .cs-sun {
+    z-index: 1;
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    transition: transform 0.3s,
+                opacity 0.3s;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 64rem) {
+  #dark-mode-toggle {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin-left: 1.875rem;
+    margin-bottom: 0rem;
+  }
+  #dark-mode-toggle .moon {
+    /* change to whatever you need */
+    /* fill: #fff; */
+  }
+}
+
 </style>
